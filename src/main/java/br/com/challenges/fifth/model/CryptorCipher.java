@@ -1,6 +1,7 @@
 package br.com.challenges.fifth.model;
 
 import java.util.Base64;
+import java.util.Objects;
 
 import javax.crypto.BadPaddingException;
 import javax.crypto.Cipher;
@@ -20,6 +21,9 @@ public class CryptorCipher implements Cryptor {
 	}
 
 	public String encrypt(String text) throws EncryptionException {
+		if (Objects.isNull(text) || text.trim().isEmpty())
+			throw new IllegalArgumentException("Deve ser informado um texto!");
+
 		try {
 		    return Base64.getEncoder().encodeToString(encrypt.doFinal(text.getBytes()));
 		} catch (IllegalBlockSizeException | BadPaddingException exception) {
@@ -28,6 +32,9 @@ public class CryptorCipher implements Cryptor {
 	}
 
 	public String decrypt(String text) throws DecryptionException {
+		if (Objects.isNull(text) || text.trim().isEmpty())
+			throw new IllegalArgumentException("Deve ser informado um texto!");
+
 		try {
 		    return new String(decrypt.doFinal(Base64.getDecoder().decode(text)));
 		} catch (IllegalBlockSizeException | BadPaddingException exception) {
