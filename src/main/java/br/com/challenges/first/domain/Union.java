@@ -10,6 +10,7 @@ public class Union {
 	private int[] union;
 	private int[] first;
 	private int[] second;
+	private boolean hasZero;
 
 	public static Union arrays(int[] first, int[] second) {
 		if (Objects.isNull(first) || Objects.isNull(second))
@@ -21,6 +22,7 @@ public class Union {
 	private Union(int[] first, int[] second) {
 		this.first = first;
 		this.second = second;
+		this.hasZero = false;
 	}
 
 	public int[] transform() {
@@ -39,7 +41,10 @@ public class Union {
 
 	private void unify(int[] array) {
 		for (int index = 0; index < array.length; index++) {
-			if (!ArrayUtil.exists(this.union, array[index])) {
+			if (array[index] == 0 && !this.hasZero) {
+				size++;
+				this.hasZero = true;
+			} else if (!ArrayUtil.exists(this.union, array[index])) {
 				this.union[size++] = array[index];
 			}
 		}
