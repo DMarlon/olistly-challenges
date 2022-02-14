@@ -16,8 +16,6 @@ import br.com.challenges.second.Second;
 import br.com.challenges.third.domain.Palindrome;
 
 public class Challenges {
-	private static final int[] first = {4, 5, 6};
-	private static final int[] second = {1, 2, 3, 5, 1, 1};
 
     public static void main(String[] args) {
     	executeFirst();
@@ -25,30 +23,39 @@ public class Challenges {
     	executeThird();
     	executeFourth();
     	executeFifth();
+
+    	System.out.println();
+    	System.out.println("Para conferir a execução dos testes pode ser visto o relátorio: test-report.html");
+
     }
 
     public static void executeFirst() {
 		System.out.println("Iniciando primeiro desafio!");
 
-		System.out.println(String.format("Argumento 1: %s", Arrays.toString(Challenges.first)));
-		System.out.println(String.format("Argumento 2: %s", Arrays.toString(Challenges.second)));
+		int[] first = { 2, 3, 1, 0, 5 };
+		int[] second = { 1, 2, 3, 4, 5 };
 
-		System.out.println(String.format("Resultado união: %s", Arrays.toString(Union.arrays(Challenges.first, Challenges.second).transform())));
-		System.out.println(String.format("Resultado interseção: %s", Arrays.toString(Intersection.arrays(Challenges.first, Challenges.second).transform())));
+		System.out.println(String.format("Argumento 1: %s", Arrays.toString(first)));
+		System.out.println(String.format("Argumento 2: %s", Arrays.toString(second)));
+
+		System.out.println(String.format("Resultado união: %s", Arrays.toString(Union.arrays(first, second).transform())));
+		System.out.println(String.format("Resultado interseção: %s", Arrays.toString(Intersection.arrays(first, second).transform())));
 
 		System.out.println("Fim");
-		System.out.println("");
+		System.out.println();
     }
 
     public static void executeSecond() {
 		System.out.println("Iniciando segundo desafio!");
 
-		System.out.println(String.format("Argumento: %s", Arrays.toString(Challenges.second)));
+		int[] array = { 89, 23, 54, 12, 94, 3, 25, 10, 123 };
+
+		System.out.println(String.format("Argumento: %s", Arrays.toString(array)));
 		Second second = new Second();
-		System.out.println(String.format("Resultado: %s",Arrays.toString(second.execute(Challenges.second))));
+		System.out.println(String.format("Resultado: %s",Arrays.toString(second.execute(array))));
 
 		System.out.println("Fim");
-		System.out.println("");
+		System.out.println();
     }
 
     public static void executeThird() {
@@ -60,7 +67,7 @@ public class Challenges {
 		System.out.println(String.format("parâmetro: %s é palíndromo: %b", "olist", Palindrome.is("olist")));
 
 		System.out.println("Fim");
-		System.out.println("");
+		System.out.println();
     }
 
     public static void executeFourth() {
@@ -85,7 +92,7 @@ public class Challenges {
 		System.out.println(String.format("Tamanho do file system é: %d kb", init.getSize() / 1000));
 
 		System.out.println("Fim");
-		System.out.println("");
+		System.out.println();
     }
 
     public static void executeFifth() {
@@ -106,7 +113,7 @@ public class Challenges {
 		}
 
 		System.out.println("Fim");
-		System.out.println("");
+		System.out.println();
     }
 
 }
