@@ -28,10 +28,10 @@ public class Challenges {
     }
 
     public static void executeFirst() {
-    	System.out.println("Iniciando primeiro desafio!");
+		System.out.println("Iniciando primeiro desafio!");
 
-    	System.out.println(String.format("Argumento 1: %s", Arrays.toString(Challenges.first)));
-    	System.out.println(String.format("Argumento 2: %s", Arrays.toString(Challenges.second)));
+		System.out.println(String.format("Argumento 1: %s", Arrays.toString(Challenges.first)));
+		System.out.println(String.format("Argumento 2: %s", Arrays.toString(Challenges.second)));
 
 		System.out.println(String.format("Resultado união: %s", Arrays.toString(Union.arrays(Challenges.first, Challenges.second).transform())));
 		System.out.println(String.format("Resultado interseção: %s", Arrays.toString(Intersection.arrays(Challenges.first, Challenges.second).transform())));
@@ -41,10 +41,10 @@ public class Challenges {
     }
 
     public static void executeSecond() {
-    	System.out.println("Iniciando segundo desafio!");
+		System.out.println("Iniciando segundo desafio!");
 
-    	System.out.println(String.format("Argumento: %s", Arrays.toString(Challenges.second)));
-    	Second second = new Second();
+		System.out.println(String.format("Argumento: %s", Arrays.toString(Challenges.second)));
+		Second second = new Second();
 		System.out.println(String.format("Resultado: %s",Arrays.toString(second.execute(Challenges.second))));
 
 		System.out.println("Fim");
@@ -64,7 +64,7 @@ public class Challenges {
     }
 
     public static void executeFourth() {
-    	System.out.println("Iniciando quarto desafio!");
+		System.out.println("Iniciando quarto desafio!");
 
 		Folder boot = Folder.mkdir("boot");
 		boot.add(File.touch("grub.fake", new byte[10000]));
@@ -91,10 +91,10 @@ public class Challenges {
     public static void executeFifth() {
     	System.out.println("Iniciando quinto desafio!");
 
-    	try {
-	    	Fifth fifth = new Fifth();
+		try {
+			Fifth fifth = new Fifth();
 
-	    	Cryptor cryptor = fifth.execute();
+			Cryptor cryptor = fifth.execute();
 			String encrypt = cryptor.encrypt("Criptografar AES Teste");
 			String decrypt = cryptor.decrypt(encrypt);
 
