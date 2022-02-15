@@ -12,19 +12,27 @@ Olistly - Desafios
 
 ## Executação do Projeto
 
+* Usando docker
 1. Pode ser baixado apenas o [Dockerfile](Dockerfile)
 2. Após o download basta criar a imagem usando o comando ```docker build . -t nome_da_imagem```
 3. Após buildar o projeto basta executa-lo usando o comando ```docker run nome_da_imagem```
 
+* Fazendo manualmente
+1. Para execução manual do projeto deve ser clonado o repositório.
+2. Deve ser executado o build do projeto usando o comando ```./gradlew build```
+3. O build vai gerar o arquivo .jar na pasta ```build/libs/challenges-0.0.1-OLY.jar```
+4. Para executar-lo basta rodar ```java -jar challenges-0.0.1-OLY.jar```
+5. Para verificar o relatorio dos testes basta acessar o arquivo ```index.html``` no local ```build/reports/tests/test/index.html```
+
 ## Observações
 
-* Para o projeto em geral tentei utilizar tipos primitivos do Java pois suas bibliotecas padrões já tem muita coisa implementada.
+* Para o projeto em geral tentei utilizar tipos primitivos do Java, pois suas bibliotecas padrões de coleções e objetos já tem muitas coisas implementadas e prontas, que se usadas dificultaria a avaliação do teste, pois seria apenas a utilização de sua biblioteca sem necessidade de escrever a lógica.
 * Para as classes de domínio tentei utilizar o padrão de projeto static factory juntamente com construtores privados, evitando assim a construção de objetos externamente as suas classes, assim auxiliando na legibilidade do código tentando deixar o mesmo usando fluent interface.
 * Para o desafio 5 foi usado meu projeto já existente de [criptografia](https://github.com/DMarlon/cryptography), visando facilitar o uso de AES em projetos Java.
 
 # Testes
 
-* Foi desenvolvido testes unitários das classes criadas no projeto, visando facilitar a manutenção e alteração do código.
+* Foi desenvolvido testes unitários das classes criadas no projeto, visando facilitar a manutenção e refatoração do código.
 * Todos os testes são executados no build do projeto, caso algum teste não passar o build não é concluído.
 * No momento do build do projeto é criado um relatório sobre a execução dos testes podendo navegar e verificar as execuções. Para facilitar o acesso foi criado um link simbólico na raiz do projeto chamado ```test-report.html```
 
