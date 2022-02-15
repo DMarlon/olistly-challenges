@@ -6,7 +6,7 @@ RUN apk add git
 RUN git clone https://github.com/DMarlon/olistly-challenges.git .
 RUN ./gradlew build
 RUN mv build/libs/challenges-0.0.1-OLY.jar challenges.jar
-RUN mv build/reports/tests/test/index.html test-report.html
+RUN ln -s build/reports/tests/test/index.html test-report.html
 
 CMD [\
   "java",\
