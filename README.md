@@ -10,14 +10,14 @@ Olistly - Desafios
 4. File System
 5. Criptografia
 
-## Executação do Projeto
+## Execução do Projeto
 
-* Usando docker
+* **Usando docker**
 1. Pode ser baixado apenas o [Dockerfile](Dockerfile)
 2. Após o download basta criar a imagem usando o comando ```docker build . -t nome_da_imagem```
 3. Após buildar o projeto basta executa-lo usando o comando ```docker run nome_da_imagem```
 
-* Fazendo manualmente
+* **Fazendo manualmente**
 1. Para execução manual do projeto deve ser clonado o repositório.
 2. Deve ser executado o build do projeto usando o comando ```./gradlew build```
 3. O build vai gerar o arquivo .jar na pasta ```build/libs/challenges-0.0.1-OLY.jar```
