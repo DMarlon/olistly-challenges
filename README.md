@@ -34,7 +34,7 @@ Olistly - Desafios
 
 * Foi desenvolvido testes unitários das classes criadas no projeto, visando facilitar a manutenção e refatoração do código.
 * Todos os testes são executados no build do projeto, caso algum teste não passar o build não é concluído.
-* No momento do build do projeto é criado um relatório sobre a execução dos testes podendo navegar e verificar as execuções. Para facilitar o acesso foi criado um link simbólico na raiz do projeto chamado ```test-report.html```
+* No momento do build do projeto é criado um relatório referente a execução dos testes, o mesmo permite navegar e verificar detalhadamente cada execução. Para facilitar o acesso foi criado um link simbólico na raiz do projeto chamado ```test-report.html```
 
 ## Feito Com:
 [![UBUNTU](https://img.shields.io/badge/Ubuntu-e95420?style=for-the-badge&logo=ubuntu&logoColor=white)](https://ubuntu.com/download)
