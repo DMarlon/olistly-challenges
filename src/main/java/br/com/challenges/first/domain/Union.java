@@ -41,7 +41,7 @@ public class Union {
 
 	private void unify(int[] array) {
 		for (int index = 0; index < array.length; index++) {
-			if (array[index] == 0 && !this.hasZero) {
+			if (!this.hasZero && array[index] == 0) {
 				size++;
 				this.hasZero = true;
 			} else if (!ArrayUtil.exists(this.union, array[index])) {

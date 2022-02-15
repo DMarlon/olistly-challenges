@@ -46,7 +46,7 @@ public class Intersection {
 	private void unify() {
 		for (int index = 0; index < longer.length; index++) {
 			boolean existsInShorter = ArrayUtil.exists(this.shorter, longer[index]);
-			if (existsInShorter && longer[index] == 0 && !hasZero) {
+			if (!hasZero && longer[index] == 0 && existsInShorter) {
 				size++;
 				hasZero = true;
 			} else if (existsInShorter && !ArrayUtil.exists(this.intersection, longer[index])) {
